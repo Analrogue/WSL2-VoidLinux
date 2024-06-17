@@ -40,10 +40,12 @@ alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -p
 
 # Github
 cdgit() {
-cd ~/.dotfiles/.github/WSL2-VoidLinux/
+cd ~/.dotfiles/.github/wsl2-voidlinux/
 }
 
 gitpush() {
+echo 'pushd ~/.dotfiles/.github/WSL2-VoidLinux/'
+pushd ~/.dotfiles/.github/WSL2-VoidLinux/
 echo '>> git add .'
 git add .
 echo -e "\n"'>> git commit -m '\''ubuntu basic configuration file'\'
@@ -52,6 +54,7 @@ echo -e "\n"'>> git push'
 git push
 echo -e "\n"'>> git status'
 git status
+pushd
 }
 
 gitremove() {
