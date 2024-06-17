@@ -4,6 +4,7 @@ export PATH=$PATH:~/.local/bin/
 source ~/.aliasrc
 source ~/.functionrc
 
+
 # history 'space','duplicate' prevention
 HISTCONTROL=ignoreboth
 

@@ -2,6 +2,7 @@
 alias zshrc='vim ~/.zshrc'
 alias aliasrc='vim ~/.aliasrc'
 alias functionrc='vim ~/.functionrc'
+alias vimrc='vim ~/.vimrc'
 
 # etc
 alias sudo='sudo '
