@@ -1,0 +1,84 @@
+# rc
+alias zshrc='vim ~/.zshrc'
+alias aliasrc='vim ~/.aliasrc'
+alias functionrc='vim ~/.functionrc'
+
+# etc
+alias sudo='sudo '
+
+# aliasfunction
+alias aliasfunction='echo -e "\
+rc - *rc \n\
+xbps - aliasinstall, aliasquery, aliasremove \n\
+exa - aliasexa \n\
+"'
+
+# xbps-install & update
+alias aliasinstall='echo -e "install : xbps-install \n\
+installs : package install :xbps-install -S \n\
+installsu : all package update : xbps-install -Su \n\
+xmirror(non-alias, must-sudo) : repository change based on tui \n\
+"'
+
+alias install='xbps-install'
+# package install
+alias installs='xbps-install -S'
+# all package update
+alias installsu='xbps-install -Su'
+
+# xbps-query 
+alias aliasquery='echo -e "query : xbps-query \n\
+querym : manual install list : xbps-query -m \n\
+queryl : all installed list : xbps-query -l \n\
+queryrs : remote repositories search : xbps-query -Rs \n\
+queryf : package file list local-installed : xbps-query -f \n\
+xlocate : package file list queried at remote repostories : xlocate (pre-indexing : xlocate -S) \n\
+queryinstalled : all installed packages, without their version \n\
+: xbps-query -l | awk '"'{ print \\\$2 }'"' | xargs -n1 xbps-uhelper getpkgname \n\
+"'
+alias query='xbps-query'
+# manual install list
+alias querym='xbps-query -m'
+# all installed list
+alias queryl='xbps-query -l'
+# remote repositories search
+alias queryrs='xbps-query -Rs'
+# package file list installed by specific package
+alias queryf='xbps-query -f'
+# package file list queried at remote repositories 
+# xlocate (pre-indexing : xlocate -S)
+# all installed packages, without their version
+alias queryinstalled="xbps-query -l | awk '{ print \$2 }' | xargs -n1 xbps-uhelper getpkgname"
+
+
+# xbps-remove
+alias aliasremove='echo -e "remove : xbps-remove \n\
+remover : package remove include dependancy : xbps-remove -R \n\
+removeyo : orphaned package remove : xbps-remove -yo \n\
+removeyO : package cache clean : xbps-remove -yO \n\
+"'
+
+alias remove='xbps-remove'
+# package remove include dependancy
+alias remover='xbps-remove -R'
+# orphaned package remove
+alias removeyo='xbps-remove -yo'
+# package cache clean
+alias removeyO='xbps-remove -yO'
+
+
+# Exa
+alias ls='exa --icons'
+alias lsal='exa --icons --long --all'
+alias lsl='exa --icons -lbF --git'                                                # list, size, type, git
+alias lsll='exa --icons -lbGF --git'                                              # long list
+alias lsllm='exa --icons -lbGF --git --sort=modified'                             # long list, modified date sort
+alias lslS='exa --icons -1'                                                       # one column, just names
+alias lslt='exa --icons --tree --level=2'                                         # tree
+alias aliasexa='echo -e "ls=exa --icons \n\
+lsal=exa --icons --long --all \n\
+lsl=exa --icons -lbF --git \n\
+lsll=exa --icons -lbGF --git \n\
+lsllm=exa --icons -lbGF --git --sort=modified \n\
+lslS=exa --icons -1 \n\
+lslt=exa --icons --tree --level=2"'

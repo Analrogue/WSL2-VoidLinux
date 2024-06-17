@@ -1,0 +1,82 @@
+function ../. {
+clear && echo "source zshrc .." | colout "(\w|\W)" rainbow && source ~/.zshrc
+}
+
+# Output Colorization
+
+#grepcc() {
+#grep --color=always -E "$1|$" $2
+#}
+#mancc() {
+#man $1 | grepc '(^|\s)(\-){1,2}(\w+(\-){0,2}\w*(\-){0,2}\w*={0,1}\w*|\s)'| less -R
+#}
+
+#grep
+grepc() {
+grep -E "$1|$" $2 | colout "^.*$" Random
+}
+
+#man
+manc() {
+man $1 | colout "^.*$" Random | less -R
+}
+
+#--help
+helpc() {
+$1 --help | colout "^.*$" Random
+}
+
+
+# Find
+function fd() {
+        sudo find / ! \( -path '/mnt' -prune \) -name "$1" 2>&1 | grep -v "File system loop detected"
+        # instead '2>&1', '>&' enable ??
+}
+alias fnd='find / ! \( -path "/mnt" -prune \) -name'
+alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -prune \) -name"'
+
+
+
+
+# Github
+cdgit() {
+cd ~/.dotfiles/.github/WSL2-VoidLinux/
+}
+
+gitpush() {
+echo '>> git add .'
+git add .
+echo -e "\n"'>> git commit -m '\''ubuntu basic configuration file'\'
+git commit -m 'voidlinux basic configuration file'
+echo -e "\n"'>> git push'
+git push
+echo -e "\n"'>> git status'
+git status
+}
+
+gitremove() {
+echo '>> git pull origin main'
+git pull origin main
+echo -e "\n"'>> git rm '"$@"
+git rm $@
+echo -e "\n"'>> git commit -m '\''remove '\'"$@"
+git commit -m 'remove '"$@"
+echo -e "\n"'>> git push origin main'
+git push origin main
+echo -e "\n"'>> git status'
+git status
+}
+
+gitproblem() {
+echo '>> git config pull.rebase false'
+git config pull.rebase false
+}
+
+alias push='cdgit && gitpush && ~'
+
+alias aliasgit='echo -e "cdgit : cd ~/.dotfiles/.github/WSL2-VoidLinux/ \n\
+gitpush : git add . && git commit -m && git push \n\
+gitremove : git pull && git rm (file) && git commit -m && git push origin main \n\
+gitproblem : git config pull.rebase false (remote origin branch change import and merge local) \n\
+"'
+
