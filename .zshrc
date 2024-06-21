@@ -11,6 +11,11 @@ HISTCONTROL=ignoreboth
 # delete key problem 
 bindkey "^[[3~" delete-char 
 
+# Fix HOME, END keys for zsh
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+
 # run-help activation on zsh
 autoload -U run-help
 

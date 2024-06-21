@@ -40,7 +40,7 @@ alias aliasfind='echo -e "alias: fd or fnd, command: find / ! \( -path "/mnt" -p
 
 # Github
 cdgit() {
-cd ~/.dotfiles/.github/wsl2-voidlinux/
+cd ~/.dotfiles/.github/WSL2-VoidLinux/
 }
 
 gitpush() {
