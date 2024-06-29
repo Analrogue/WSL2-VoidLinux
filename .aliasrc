@@ -15,17 +15,17 @@ exa - aliasexa \n\
 "'
 
 # xbps-install & update
-alias aliasinstall='echo -e "install : xbps-install \n\
-installs : package install :xbps-install -S \n\
-installsu : all package update : xbps-install -Su \n\
+alias aliasinstall='echo -e " \n\
+installs : package install : sudo xbps-install -S \n\
+installsu : all package update : sudo xbps-install -Su \n\
 xmirror(non-alias, must-sudo) : repository change based on tui \n\
 "'
 
-alias install='xbps-install'
+
 # package install
-alias installs='xbps-install -S'
+alias installs='sudo xbps-install -S'
 # all package update
-alias installsu='xbps-install -Su'
+alias installsu='sudo xbps-install -Su'
 
 # xbps-query 
 alias aliasquery='echo -e "query : xbps-query \n\
