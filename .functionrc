@@ -48,7 +48,7 @@ echo 'pushd ~/.dotfiles/.github/WSL2-VoidLinux/'
 pushd ~/.dotfiles/.github/WSL2-VoidLinux/
 echo '>> git add .'
 git add .
-echo -e "\n"'>> git commit -m '\''ubuntu basic configuration file'\'
+echo -e "\n"'>> git commit -m '\''voidlinux basic configuration file'\'
 git commit -m 'voidlinux basic configuration file'
 echo -e "\n"'>> git push'
 git push

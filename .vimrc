@@ -10,6 +10,8 @@ set ignorecase     " 대소문자 구분 없는 검색
 set smartcase      " 대소문자 구분 검색 설정
 set incsearch      " 점진적 검색
 set hlsearch       " 검색어 하이라이트
+"hilighted search result deactivation by shortcut
+nnoremap <Esc> :nohlsearch<CR>
 set title          " 창 제목에 파일 이름 표시
 set ruler          " 커서 위치 상태바에 표시
 colo darkblue
