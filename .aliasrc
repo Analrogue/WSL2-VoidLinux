@@ -58,7 +58,7 @@ alias aliasremove='echo -e "remove : xbps-remove \n\
 remover : package remove include dependancy : xbps-remove -R \n\
 removeyo : orphaned package remove : xbps-remove -yo \n\
 removeyO : package cache clean : xbps-remove -yO \n\
-removecache : package cache & orphans remove : xbps-remove -yOo \n\
+removecache : clean package cache & orphans : xbps-remove -yOo \n\
 "'
 
 alias remove='xbps-remove'
@@ -68,6 +68,8 @@ alias remover='xbps-remove -R'
 alias removeyo='xbps-remove -yo'
 # package cache clean
 alias removeyO='xbps-remove -yO'
+# clean package cache & orphans
+alias removecache='xbps-remove -yOo'
 
 
 # Exa
