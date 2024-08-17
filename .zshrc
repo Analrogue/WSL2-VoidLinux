@@ -34,7 +34,8 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt AUTO_CD # cd생략가능
 setopt HIST_IGNORE_ALL_DUPS # history 중복제거
 setopt PROMPT_SUBST # prompt='' 부분에 대한 사용자정의
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{blue}>>%f '
+RPROMPT='%F{red}brunch: ${vcs_info_msg_0_}%f'
 #####################
 
 
