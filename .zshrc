@@ -7,8 +7,10 @@ source ~/.functionrc
 
 
 ### ZSH CONFIG ###
-# history 'space','duplicate' prevention
-HISTCONTROL=ignoreboth
+# history 'space','duplicate' prevention for zsh
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+
 
 # delete key problem 
 bindkey "^[[3~" delete-char 
@@ -34,8 +36,7 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt AUTO_CD # cd생략가능
 setopt HIST_IGNORE_ALL_DUPS # history 중복제거
 setopt PROMPT_SUBST # prompt='' 부분에 대한 사용자정의
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{blue}>>%f '
-RPROMPT='%F{red}${vcs_info_msg_0_}%f'
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f %F{blue}>>%f '
 #####################
 
 
