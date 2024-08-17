@@ -6,12 +6,6 @@ source ~/.functionrc
 
 
 
-### ALIAS ###
-alias ls='ls --color=auto'
-#############
-
-
-
 ### ZSH CONFIG ###
 # history 'space','duplicate' prevention
 HISTCONTROL=ignoreboth

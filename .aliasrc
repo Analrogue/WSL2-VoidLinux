@@ -73,6 +73,7 @@ alias removecache='xbps-remove -yOo'
 
 
 # Exa
+# alias ls='ls --color=auto'
 alias ls='exa --icons'
 alias lsal='exa --icons --long --all'
 alias lsl='exa --icons -lbF --git'                                                # list, size, type, git
@@ -87,7 +88,6 @@ lsll=exa --icons -lbGF --git \n\
 lsllm=exa --icons -lbGF --git --sort=modified \n\
 lslS=exa --icons -1 \n\
 lslt=exa --icons --tree --level=2"'
-
 
 # Weather
 alias aliasweather='echo -e "weather1 : seoul \n\
