@@ -4,6 +4,7 @@ export PATH=$PATH:~/.local/bin/
 source ~/.aliasrc
 source ~/.functionrc
 
+### ZSH CONFIG ###
 
 # history 'space','duplicate' prevention
 HISTCONTROL=ignoreboth
@@ -17,9 +18,9 @@ bindkey "^[[F" end-of-line
 
 
 # run-help activation on zsh
-autoload -U run-help
+autoload -Uz run-help
 
-###############################
+##################
 
 autoload -Uz vcs_info
 precmd() { vcs_info }
