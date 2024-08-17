@@ -1,5 +1,5 @@
 # Created by newuser for 5.9
-#
+# oh-my-zsh를 설치하지 않은 경우 기본설정은 .zshrc에서
 export PATH=$PATH:~/.local/bin/
 source ~/.aliasrc
 source ~/.functionrc
